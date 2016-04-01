@@ -6,10 +6,10 @@ const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const uglify = require('gulp-uglify');
 
-const build = require('./build.js');
-
 gulp.task('metalsmith', ['clean'], function (cb) {
+  const build = require('./build.js');
   build(cb);
+  delete require.cache[require.resolve('./build.js')];
 });
 
 gulp.task('images', ['clean'], function() {
