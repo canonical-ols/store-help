@@ -2,11 +2,11 @@ TIP := $(shell git rev-parse HEAD)
 
 build: node_modules 
 	@echo "Running build..."
-	@node build
+	@npm build
 
 watch:
 	@echo "Running build with watch..."
-	@node build --watch=true
+	@npm watch
 
 node_modules: package.json
 	@echo "Installing packages..."
@@ -14,7 +14,7 @@ node_modules: package.json
 
 clean:
 	@echo "Cleaning..."
-	rm -rf build
+	@npm clean
 	rm -rf tmp
 	rm -rf src/content/snapcraft/
 
