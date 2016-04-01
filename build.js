@@ -17,7 +17,7 @@ const sorter = require('./sorter').sorter;
 nunjucks.configure('./templates', {watch: false});
 
 module.exports = function(callback) {
-  return new Metalsmith(__dirname)
+  Metalsmith(__dirname)
   .clean(false) // leave for gulp
   .source('./src')
   .destination('./build')
