@@ -22,7 +22,11 @@
         <h1 class="body__title">{{ title }}</h1>
         <p>{{ contents | safe }}</p>
         <div class="body__foot">
-          © {{ moment().format('YYYY') }} Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.
+          <p class="message__lastupdated">
+            Last updated {{ moment().format('dddd, MMMM Do YYYY, h:mm:ss a') }}
+          </p>
+          © {{ moment().format('YYYY') }} Canonical Ltd. Ubuntu and
+          Canonical are registered trademarks of Canonical Ltd.
         </div>
       </div>
     </div>

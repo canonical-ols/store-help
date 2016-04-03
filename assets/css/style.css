@@ -147,3 +147,9 @@ pre code {
 .scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* @define message */
+.message__lastupdated {
+  font-style: italic;
+  font-size: small;
+}
