@@ -26,6 +26,26 @@ a {
   text-decoration: none;
 }
 
+hr {
+  padding:0;
+  border:none;
+  border-top:1px solid #ccc;
+  text-align: center;
+  margin:1em 0;
+}
+
+hr::after {
+  background-color: #fff;
+  color: #999;
+  content: '';
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 4px;
+  position: relative;
+  top: -12px;
+}
+
 code {
   font-family:"Ubuntu mono";
   border-radius:3px;
