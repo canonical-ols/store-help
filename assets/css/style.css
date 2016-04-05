@@ -37,7 +37,7 @@ hr {
 hr::after {
   background-color: #fff;
   color: #999;
-  content: '';
+  content: ''; /** U+E0FF in Ubuntu font is 'Circle of Friends' glyph **/
   display: inline-block;
   font-size: 16px;
   line-height: 16px;
