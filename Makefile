@@ -35,7 +35,7 @@ test:
 	@npm run test
 
 content-tarball: build
-	@echo "Creating content tarball store-help-${TIP}.tgz."
+	@echo "Creating content tarball store-help-content-${TIP}.tgz."
 	@cd build && tar -czf ../store-help-content-${TIP}.tgz .
 	@echo "Done."
 
