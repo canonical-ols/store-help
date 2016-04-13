@@ -1,4 +1,5 @@
 TIP := $(shell git rev-parse HEAD)
+SNAPCRAFT_REPO ?= https://github.com/ubuntu-core/snapcraft/
 
 build: node_modules 
 	@echo "Running build..."
@@ -21,7 +22,7 @@ clean:
 fetch_snapcraft_docs: clean
 	@echo "Fetching latest snapcraft docs..."
 	@mkdir -p tmp
-	@git clone https://github.com/ubuntu-core/snapcraft/ tmp/snapcraft
+	@git clone ${SNAPCRAFT_REPO} tmp/snapcraft
 	@cp -r tmp/snapcraft/docs src/content/snapcraft/
 	@echo "Annotating snapcraft docs with YAML frontmatter..."
 	@node scripts/frontmatterise.js --path=src/content/snapcraft --layout=index.html
