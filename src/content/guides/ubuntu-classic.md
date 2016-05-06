@@ -54,17 +54,17 @@ Now you’ll define how your application is built. At the bottom of the snapcraf
             source: .
 ```
 
-In this example we’ve used make to build the application, specifying that in the plugin field. However, this is not the only way. There are many different plugins for build systems in Snapcraft, and you can see a full list by running `snapcraft list-plugins`.
+In this example we’ve used make to build the application, specifying that in the `plugin` field. However, this is not the only way. There are many different plugins for build systems in Snapcraft, and you can see a full list by running `snapcraft list-plugins`.
 
-The source field tells Snapcraft where to look for your application’s source code, relative to the current working directory.
+The `source` field tells Snapcraft where to look for your application’s source code, relative to the current working directory.
 
-With the initial metadata written, you should try to build your application by running `snapcraft`. If the build fails, check to see if external libraries or headers need to be installed as part of your build process. You can tell Snapcraft to include these in the build by using the build-packages and stage-packages fields.
+With the initial metadata written, you should try to build your application by running `snapcraft`. If the build fails, check to see if external libraries or headers need to be installed as part of your build process. You can tell Snapcraft to include these in the build by using the `build-packages` and `stage-packages` fields.
 
-build-packages is a list of Ubuntu packages that need to be installed for the build, but are not included in the final application. An example of this would be GCC, the C compiler.
+`build-packages` is a list of Ubuntu packages that need to be installed for the build, but are not included in the final application. An example of this would be GCC, the C compiler.
 
-stage-packages is a list of Ubuntu packages that are installed for the build and included in the final application. You can look up the correct names for Ubuntu packages at [packages.ubuntu.com](http://packages.ubuntu.com/).
+`stage-packages` is a list of Ubuntu packages that are installed for the build and included in the final application. You can look up the correct names for Ubuntu packages at [packages.ubuntu.com](http://packages.ubuntu.com/).
 
-Adding these fields beneath the source field will look something like this:
+Adding these fields beneath the `source` field will look something like this:
 
 ```yaml
 parts:
@@ -83,7 +83,7 @@ Running `snapcraft` again to build your application should succeed. You can run 
 
 By default, all files created by the build are included. To filter this down, you can add some additional rules in the snapcraft.yaml.
 
-Your snap has all the files needed, but you’ll need to specify the command used to start your app. To do this, add the following apps section to your snapcraft.yaml file:
+Your snap has all the files needed, but you’ll need to specify the command used to start your app. To do this, add the following `apps` section to your snapcraft.yaml file:
 
     apps:
         your_app_name:
