@@ -110,7 +110,7 @@ Once you are happy with how your application works, you can send it to the Ubunt
 
 If you do not already have an account with Ubuntu One, you’ll need to [create one](https://login.ubuntu.com/) and click the validation link in your email before continuing.
 
-Go to [https://myapps.developer.ubuntu.com/](https://myapps.developer.ubuntu.com/) and click the “New package” button.
+Go to [https://myapps.developer.ubuntu.com/](https://myapps.developer.ubuntu.com/) and click the “New snap” button.
 
 You’ll first need to set a “Developer namespace.” This allows more than one developer to use the same name for their application (e.g. calculator.alice and calculator.bob). You also need to specify what country you will be offering your applications from.
 
