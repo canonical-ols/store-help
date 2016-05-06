@@ -94,7 +94,7 @@ Run `snapcraft` again to pick up this change. You can now install and run your s
 # Testing it out
 To see how your app will behave once downloaded from the Ubuntu Store, you’ll need to install some additional software. Open a terminal and run the following commands:
 
-    $ sudo apt-get install ubuntu-snappy
+    $ sudo apt-get install snapd
     $ sudo snappy install ubuntu-core
 
 You will now be able to install the snap file you created earlier:
