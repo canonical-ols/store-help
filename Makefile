@@ -9,8 +9,13 @@ watch:
 	@npm run watch
 
 node_modules: package.json
-	@echo "Installing packages..."
+ifdef REGISTRY
+	@echo "Installing packages from npm registry ${REGISTRY}..."
+	@npm install --registry=${REGISTRY}
+else
+	@echo "Installing packages from local cache..."
 	@npm install
+endif
 
 clean:
 	@echo "Cleaning..."
